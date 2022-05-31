@@ -1,0 +1,21 @@
+﻿#version 430
+
+struct particle {
+    vec4 position;
+    vec4 velocities;
+    vec4 col;
+};
+
+layout (std140, binding = 1) buffer posSSBO {
+    particle particles[];
+};
+
+void main() {
+    uint gid = gl_GlobalInvocationID.x;
+    float gid_float = float(gid);
+    particles[gid].position.xyz = origin;
+}
+
+float rand(vec2 co) {
+    return fract(sin(dot(co.xy, vec2(12.9898, 7.233))) * 43758.5453);
+}

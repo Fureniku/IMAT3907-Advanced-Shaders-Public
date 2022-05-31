@@ -1,0 +1,8 @@
+- Compute shaders: Not quite working (rendering black instead of whatever colour is set)
+- SSBO - ????? not enough info
+
+https://www.youtube.com/watch?v=GADTasvDOX4
+
+
+- how to do models, particles etc on a procgen world?
+use compute shader/SSBO
